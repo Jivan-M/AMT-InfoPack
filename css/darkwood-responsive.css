@@ -1,0 +1,68 @@
+
+
+
+@media screen and (max-width: 1000px) {
+	.container, .header { width: 90% !important; }
+	.left, .right { width: 20%; }
+	.middle { width: 55% }
+	.headerpadding { margin-left: 1em; }
+}
+
+@media screen and (max-width: 800px) {
+	.container, .header, .left, .middle, .right, .headerpadding { width: 97% !important; }
+	.container { overflow: unset; }
+	.middle { margin: 1em 0px !important; }
+	/*.sidebox { margin-bottom: 0px; }*/
+	.footer { width: 90%; }
+	.headerpadding { margin-left: 1em; }
+	.container { top: 0px !important; }
+	.headercontainer { position: unset !important; }
+	.middle li, .middle dd { margin: 1.35em 1.15em; }
+
+	/* rearrange elements * /
+	/* 
+	https://webdesign.tutsplus.com/tutorials/a-few-different-css-methods-for-column-ordering--cms-27079
+	https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns
+	https://www.digitalocean.com/community/tutorials/css-css-grid-layout-fr-unit
+	*/
+	.container, .allboxessameheight { 
+		display: grid !important; 
+		grid-template-columns: repeat(1);
+	}
+	.right { order: 3; float: none !important; }
+	.left { order: 2; float: none !important; }
+	/* /////_______//// */
+}
+
+/* media manager and config manager for mobile */
+@media screen and (max-width: 480px){
+  fieldset, 
+  #mediamanager__page, 
+  #mediamanager__page .filelist{ 
+    max-width: 100%; min-width: unset; 
+  }
+  #mediamanager__page .file, 
+  #mediamanager__page .namespaces, 
+  #mediamanager__page .panel { 
+    width: 100%; clear: both; float: none;
+  }
+  /*.page li, .page dd { margin: 1.35em 0px !important; }*/
+  #config__manager fieldset { background-color: transparent; }
+  #config__manager tr { }
+  #config__manager td { display: block;  padding: 1.15em 0px; max-width: 50%;  }
+
+  #config__manager fieldset { width: 100%; box-sizing: border-box; }
+
+  #config__manager fieldset td.value { width: unset; }
+
+  	/* make <select> not exceed it's parent div's width */
+  	/* https://stackoverflow.com/q/44810056/337306 */
+  	div.input { display: flex; } select { width: 100%; flex-shrink: 1; }
+
+  #config__manager td .input, 
+  #config__manager fieldset td.value, 
+  #config__manager td input.edit { 
+    max-width: 100%; 
+    width: unset;
+  }
+}

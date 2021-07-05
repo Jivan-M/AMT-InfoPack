@@ -1,0 +1,7 @@
+base     darkwood
+author   desbest
+email    afaninthehouse@gmail.com
+date     2021-02-01
+name     Dark Wood Template
+desc     A dark template
+url      https://www.dokuwiki.org/template:darkwood
